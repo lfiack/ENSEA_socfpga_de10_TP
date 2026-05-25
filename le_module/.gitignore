@@ -1,0 +1,15 @@
+le_module.ko
+.le_module.ko.cmd
+le_module.mod
+le_module.mod.c
+.le_module.mod.cmd
+le_module.mod.o
+.le_module.mod.o.cmd
+le_module.o
+.le_module.o.cmd
+.module-common.o
+..module-common.o.cmd
+modules.order
+.modules.order.cmd
+Module.symvers
+.Module.symvers.cmd

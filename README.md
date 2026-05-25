@@ -1,6 +1,8 @@
 # ENSEA_socfpga_de10_TP
 TP SoCFPGA sur DE10
 
+https://github.com/zangman/de10-nano/blob/master/README.md#getting-started
+
 ## Outils à installer 
 
 ```bash
@@ -657,3 +659,18 @@ lsblk
 # Write to the correct device (Ex: /dev/sdb).
 sudo dd if=sdcard.img of=/dev/sdb bs=64K status=progress
 ```
+
+
+## Code User space
+
+```bash
+/sys/class/leds/hps_led0
+echo "1" > brightness
+```
+
+1. Écrivez un code C permettant d'ouvrir le fichier ```/sys/class/leds/hps_led0/brightness``` et d'utiliser la fonction ```write()``` pour faire clignoter la LED.
+
+> **Note** : Tant que j'ai pas résolu l'incompatibilité de libc, il faudra compiler sur la carte.
+> **TODO** : réessayer le tuto avec la version 10.2.1 de gcc (correspond à la version bullseye)
+
+2. Écrivez un code C permettant de faire clignoter la LED en remappant la mémoire avec ```mmap()```.
