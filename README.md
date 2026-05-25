@@ -17,6 +17,10 @@ yay -S extra/debootstrap extra/qemu-user-static extra/qemu-user-static-binfmt
 >    debian-ports-archive-keyring: check release signatures for Debian Ports
 >    ubuntu-keyring: check release signatures for Ubuntu
 
+```bash
+sudo usermod -a -G uucp $USER
+```
+
 ## What do we need for Embedded Linux?
 
 There are a few steps we need to go through to build a working embedded linux OS:
@@ -53,6 +57,8 @@ export CROSS_COMPILE=$PWD/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-linux-gnue
 ```
 
 ## Building the Universal Bootloader (U-Boot)
+
+> **TODO** Works only with version 2021 in https://github.com/zangman/de10-nano/blob/master/docs/Building-the-Universal-Bootloader-U-Boot.md
 
 ### Getting the sources
 
