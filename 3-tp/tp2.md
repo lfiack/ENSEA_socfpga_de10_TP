@@ -19,9 +19,6 @@ echo "1" > /sys/class/leds/hps_led0/brightness
 
 1. Écrivez un code C permettant d'ouvrir le fichier ```/sys/class/leds/hps_led0/brightness``` et d'utiliser la fonction ```write()``` pour faire clignoter la LED.
 
-> **Note** : Tant que j'ai pas résolu l'incompatibilité de libc, il faudra compiler sur la carte.
-> **TODO** : réessayer le tuto avec la version 10.2.1 de gcc (correspond à la version bullseye)
-
 ### Accès à la LED par son adresse
 
 Dans cette partie, vous allez écrire un code C permettant de faire clignoter la LED en remappant la mémoire avec ```mmap()```.

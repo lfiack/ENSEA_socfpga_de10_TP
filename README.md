@@ -262,7 +262,7 @@ Dans le dossier ```emb/```:
 ```bash
 sudo mkdir rootfs
 
-sudo debootstrap --arch=armhf --foreign bullseye rootfs
+sudo debootstrap --arch=armhf --foreign trixie rootfs
 ```
 
 ### Second stage
@@ -318,11 +318,11 @@ Ajoutez la locale en_US.UTF-8.
 
 
 ```bash
-auto lo eth0
+auto lo end0
 iface lo inet loopback
 
-allow-hotplug eth0
-iface eth0 inet dhcp
+allow-hotplug end0
+iface end0 inet dhcp
 ```
 
 > TODO : Remplacé end0 par eth0 à tester

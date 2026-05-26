@@ -269,10 +269,10 @@ make ARCH=arm LOCALVERSION=zImage -j 8
 ```bash
 sudo mkdir rootfs
 
-sudo debootstrap --arch=armhf --foreign bullseye rootfs
+sudo debootstrap --arch=armhf --foreign trixie rootfs
 ```
 
-2. Qu'est-ce que ```Debian``` ? Qu'est-ce que ```Bullseye``` ?
+2. Qu'est-ce que ```Debian``` ? Qu'est-ce que ```trixie``` ?
 
 ### Second stage
 
@@ -337,11 +337,11 @@ Ajoutez la locale en_US.UTF-8. Qu'est-ce qu'une locale ?
 
 
 ```bash
-auto lo eth0
+auto lo end0
 iface lo inet loopback
 
-allow-hotplug eth0
-iface eth0 inet dhcp
+allow-hotplug end0
+iface end0 inet dhcp
 ```
 
 8. Installez un serveur ssh :
