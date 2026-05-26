@@ -222,6 +222,12 @@ Ou alors ici : https://stackoverflow.com/questions/73604585/checking-for-environ
 
 ## Compiler le Kernel
 
+Selon wikipedia : 
+
+> Debian 13, nom de code Trixie, a été publié le 9 août 2025. Il utilise le noyau v6.12 LTS.
+
+> **TODO** Tester avec cette version de noyau. (socfpga-6.12.43-lts)
+
 ### Télécharger le Kernel
 
 1. Dans le dossier ```emb/```, téléchargez le noyau linux :
