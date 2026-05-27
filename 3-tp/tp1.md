@@ -36,6 +36,8 @@ mkdir emb
 cd emb
 ```
 
+> **Important** : Certains téléchargements sont très longs (gcc, u-boot, linux). Ils sont disponibles sur le compte ese, dans `~/Documents/assets_tp_linux`. Vous pouvez copier le contenu de ce dossier vers votre dossier `emb/`. Les lignes correspondant aux téléchargements sont indiqués en commentaires.
+
 2. Si vous travaillez avec git (et c'est recommandé) il faudra que l'outil ignore ce dossier, car il sera particulièrement volumineux.
 
 Créez un fichier ```.gitignore``` (au même niveau que emb) et ajoutez-y la ligne suivante :
@@ -47,7 +49,7 @@ emb/
 3. Téléchargez le compilateur gcc pour ARM.
 
 ```bash
-wget https://developer.arm.com/-/media/Files/downloads/gnu/15.2.rel1/binrel/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-linux-gnueabihf.tar.xz
+#wget https://developer.arm.com/-/media/Files/downloads/gnu/15.2.rel1/binrel/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-linux-gnueabihf.tar.xz
 
 tar -xvf arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-linux-gnueabihf.tar.xz
 
@@ -70,7 +72,7 @@ export CROSS_COMPILE=$PWD/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-linux-gnue
 1. Dans le dossier ```emb/```, télécharger ```u-boot``` :
 
 ```bash
-git clone https://github.com/u-boot/u-boot.git
+#git clone https://github.com/u-boot/u-boot.git
 ```
 
 2. Récupérez une version compatible avec notre carte :
@@ -220,7 +222,7 @@ Il contient le bootloader combiné au secondary program loader (spl).
 1. Dans le dossier ```emb/```, téléchargez le noyau linux :
 
 ```bash
-git clone https://github.com/altera-opensource/linux-socfpga.git
+#git clone https://github.com/altera-opensource/linux-socfpga.git
 cd linux-socfpga
 #git branch -a
 git checkout socfpga-7.0

@@ -40,6 +40,8 @@ mkdir emb
 cd emb
 ```
 
+> **Important** : Certains téléchargements sont très longs (gcc, u-boot, linux, rootfs). Ils sont disponibles sur le compte ese, dans `~/Documents/assets_tp_linux`. Vous pouvez copier le contenu de ce dossier vers votre dossier `emb/`. Les lignes correspondant aux téléchargements sont indiqués en commentaires.
+
 Si vous travaillez avec git (et c'est recommandé) il faudra que l'outil ignore ce dossier, car il sera particulièrement volumineux.
 
 Créez un fichier ```.gitignore``` (au même niveau que emb) et ajoutez-y la ligne suivante :
@@ -49,7 +51,7 @@ emb/
 ```
 
 ```bash
-wget https://developer.arm.com/-/media/Files/downloads/gnu/15.2.rel1/binrel/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-linux-gnueabihf.tar.xz
+#wget https://developer.arm.com/-/media/Files/downloads/gnu/15.2.rel1/binrel/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-linux-gnueabihf.tar.xz
 
 tar -xvf arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-linux-gnueabihf.tar.xz
 
@@ -65,7 +67,7 @@ export CROSS_COMPILE=$PWD/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-linux-gnue
 ### Getting the sources
 
 ```bash
-git clone https://github.com/u-boot/u-boot.git
+#git clone https://github.com/u-boot/u-boot.git
 ```
 
 Récupérez la dernière version stable :
@@ -233,7 +235,7 @@ Selon wikipedia :
 1. Dans le dossier ```emb/```, téléchargez le noyau linux :
 
 ```bash
-git clone https://github.com/altera-opensource/linux-socfpga.git
+#git clone https://github.com/altera-opensource/linux-socfpga.git
 cd linux-socfpga
 #git branch -a
 git checkout socfpga-7.0
@@ -266,9 +268,9 @@ make ARCH=arm LOCALVERSION=zImage -j 8
 Dans le dossier ```emb/```:
 
 ```bash
-sudo mkdir rootfs
+#sudo mkdir rootfs
 
-sudo debootstrap --arch=armhf --foreign trixie rootfs
+#sudo debootstrap --arch=armhf --foreign trixie rootfs
 ```
 
 ### Second stage
@@ -278,7 +280,7 @@ sudo cp /usr/bin/qemu-arm-static rootfs/usr/bin/
 
 sudo chroot rootfs /usr/bin/qemu-arm-static /bin/bash -i
 
-/debootstrap/debootstrap --second-stage
+#/debootstrap/debootstrap --second-stage
 ```
 
 ### Configuration
